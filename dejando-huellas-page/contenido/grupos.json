@@ -1,0 +1,66 @@
+{
+  "titulo": "Un grupo para cada etapa",
+  "bajada": "Cada edad tiene su ritmo. Por eso los niños se agrupan por etapa, con experiencias pensadas para lo que están descubriendo.",
+  "nota": {
+    "titulo": "¿No sabes en qué grupo va tu hijo?",
+    "texto": "Escríbenos su edad y te recomendamos el grupo y el horario que mejor le quedan."
+  },
+  "grupos": [
+    {
+      "id": "semillitas",
+      "nombre": "Semillitas",
+      "edades": "3 meses a 2 años",
+      "puntos": [
+        "Estimulación temprana",
+        "Estimulación sensorial",
+        "Arte",
+        "Música",
+        "Educación física",
+        "Clase educativa en inglés",
+        "Rutina de alimentación y descanso respetando su ritmo",
+        "Amor, empatía y contacto cercano",
+        "Atención, cuidado y acompañamiento"
+      ],
+      "foto": { "nombre": "semillitas-pintando", "alt": "Niño pequeño sentado en el césped, pintando con pincel junto a una paleta de colores", "enfoque": "50% 10%" },
+      "mensajeWhatsapp": "Hola, quisiera información sobre el grupo Semillitas (3 meses a 2 años)."
+    },
+    {
+      "id": "pasitos",
+      "nombre": "Pasitos",
+      "edades": "2 a 3 años",
+      "puntos": [
+        "Estimulación temprana",
+        "Estimulación sensorial",
+        "STEAM",
+        "Música",
+        "Educación física",
+        "Clase educativa en inglés",
+        "Preescritura",
+        "Rutina de alimentación y descanso respetando su ritmo",
+        "Amor, empatía y contacto cercano",
+        "Atención, cuidado y acompañamiento"
+      ],
+      "foto": { "nombre": "pasitos-pies", "alt": "Pies descalzos de una niña caminando sobre un camino sensorial azul en el césped", "enfoque": "35% 60%" },
+      "mensajeWhatsapp": "Hola, quisiera información sobre el grupo Pasitos (2 a 3 años)."
+    },
+    {
+      "id": "huellitas",
+      "nombre": "Huellitas",
+      "edades": "3 a 4 años",
+      "puntos": [
+        "Estimulación temprana",
+        "Estimulación sensorial",
+        "STEAM",
+        "Música",
+        "Educación física",
+        "Clase educativa en inglés",
+        "Lectoescritura",
+        "Rutina de alimentación y descanso respetando su ritmo",
+        "Amor, empatía y contacto cercano",
+        "Atención, cuidado y acompañamiento"
+      ],
+      "foto": { "nombre": "huellitas-experimento", "alt": "Niño con lentes de seguridad sonriendo con un tubo de ensayo en la mano", "enfoque": "50% 35%" },
+      "mensajeWhatsapp": "Hola, quisiera información sobre el grupo Huellitas (3 a 4 años)."
+    }
+  ]
+}

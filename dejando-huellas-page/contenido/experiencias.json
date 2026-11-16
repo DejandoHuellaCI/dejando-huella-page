@@ -1,0 +1,54 @@
+{
+  "titulo": "Experiencias para aprender jugando",
+  "bajada": "A través del juego, la exploración y la creatividad, cada niño descubre sus capacidades y gana autonomía.",
+  "experiencias": [
+    {
+      "nombre": "STEAM",
+      "texto": "Ciencia, arte y matemática con experimentos que se hacen con las manos.",
+      "icono": "matraz",
+      "video": { "nombre": "clase-cientifica", "descripcion": "Niñas y niños con lentes de seguridad haciendo un experimento en la clase científica" }
+    },
+    {
+      "nombre": "Estimulación sensorial",
+      "texto": "Texturas, colores y luz para explorar el mundo con todos los sentidos.",
+      "icono": "mano",
+      "video": { "nombre": "estimulacion-sensorial", "descripcion": "Niñas jugando con espuma y pintura de colores bajo luz neón" }
+    },
+    {
+      "nombre": "Música",
+      "texto": "Cantamos, tocamos instrumentos y seguimos el ritmo con todo el cuerpo.",
+      "icono": "musica",
+      "foto": { "nombre": "musica-ukelele", "alt": "Maestra tocando el ukelele y cantando en el salón", "enfoque": "40% 24%" }
+    },
+    {
+      "nombre": "Agricultura",
+      "texto": "Sembramos, regamos y vemos crecer lo que cultivamos con nuestras manos.",
+      "icono": "brote",
+      "foto": { "nombre": "agricultura-sembrando", "alt": "Niñas sembrando con palitas de colores en la clase de agricultura", "enfoque": "35% 18%" }
+    },
+    {
+      "nombre": "Inglés",
+      "texto": "Canciones, juegos y palabras del día a día para familiarizarse con el idioma.",
+      "icono": "globo",
+      "foto": { "nombre": "dibujo-arbol-familia", "alt": "Dibujo de un árbol en la pizarra con las palabras MOM y DAD" }
+    },
+    {
+      "nombre": "Lectoescritura",
+      "texto": "Trazos, letras y cuentos para preparar la mano y despertar las ganas de leer.",
+      "icono": "libro",
+      "foto": { "nombre": "lectoescritura-trazos", "alt": "Dos niñas trazando líneas con lápiz en una hoja de trabajo" }
+    },
+    {
+      "nombre": "Educación física",
+      "texto": "Correr, trepar y moverse al aire libre para crecer fuertes y seguros.",
+      "icono": "pelota",
+      "foto": { "nombre": "patio-domo-mural", "alt": "Niños trepando un domo de juegos de colores en el patio, junto al mural del arcoíris" }
+    },
+    {
+      "nombre": "Estimulación temprana",
+      "texto": "Experiencias que acompañan el desarrollo de los más pequeños, paso a paso.",
+      "icono": "sonaja",
+      "video": { "nombre": "estimulacion-temprana", "descripcion": "Bebé subiendo por una rampa de madera, agarrándose de los apoyos de colores" }
+    }
+  ]
+}

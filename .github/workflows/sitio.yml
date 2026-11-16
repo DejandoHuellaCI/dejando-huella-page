@@ -1,0 +1,76 @@
+name: Sitio Dejando Huella
+
+# En cada cambio (también los que hace el cliente desde Pages CMS): lint, pruebas, validación del
+# contenido, build y pruebas E2E con accesibilidad. Si todo pasa y el cambio está en main, se publica
+# en GitHub Pages.
+#
+# Modo de publicación (variable de repositorio MODO_PUBLICACION, en Settings → Secrets and variables
+# → Actions → Variables):
+#   - sin definir o «vista-previa»: https://<usuario>.github.io/dejando-huella/, sin indexar en Google.
+#   - «produccion»: dejandohuellacr.com (requiere el dominio configurado en Settings → Pages).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sitio-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: dejando-huellas-page
+
+jobs:
+  calidad:
+    name: Validar, probar y construir
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: dejando-huellas-page/package-lock.json
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Pruebas unitarias y validación del contenido
+        run: npm test -- --watch=false
+      - name: Build de producción (prerender)
+        run: npm run build
+      - name: Pruebas E2E y accesibilidad (axe)
+        run: |
+          npx playwright install --with-deps chromium
+          npm run e2e
+      - name: Build para publicar
+        if: vars.MODO_PUBLICACION != 'produccion'
+        run: npm run build:vista-previa
+      - name: Guardar el sitio construido
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dejando-huellas-page/dist/dejando-huellas-page/browser
+
+  publicar:
+    name: Publicar en GitHub Pages
+    needs: calidad
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - id: despliegue
+        uses: actions/deploy-pages@v4
