@@ -68,7 +68,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/dejando-huella/",
+              "baseHref": "/dejando-huella-page/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/entorno.ts",

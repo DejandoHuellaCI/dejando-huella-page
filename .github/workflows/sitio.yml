@@ -6,7 +6,7 @@ name: Sitio Dejando Huella
 #
 # Modo de publicación (variable de repositorio MODO_PUBLICACION, en Settings → Secrets and variables
 # → Actions → Variables):
-#   - sin definir o «vista-previa»: https://<usuario>.github.io/dejando-huella/, sin indexar en Google.
+#   - sin definir o «vista-previa»: https://<usuario>.github.io/dejando-huella-page/, sin indexar en Google.
 #   - «produccion»: dejandohuellacr.com (requiere el dominio configurado en Settings → Pages).
 
 on:

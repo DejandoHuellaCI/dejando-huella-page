@@ -7,7 +7,7 @@ Landing del centro infantil en Ciudad Quesada (dejandohuellacr.com). Angular 22 
 | Comando | Qué hace |
 |---|---|
 | `npm start` | Servidor de desarrollo en http://localhost:4200 |
-| `npm run build:vista-previa` | Build para revisar en GitHub Pages (`/dejando-huella/`): sin indexar, sin analítica y sin `CNAME` |
+| `npm run build:vista-previa` | Build para revisar en GitHub Pages (`/dejando-huella-page/`): sin indexar, sin analítica y sin `CNAME` |
 | `npm run build` | Procesa la media, compila, prerenderiza y prepara la salida para GitHub Pages (`dist/dejando-huellas-page/browser`) |
 | `npm test -- --watch=false` | Pruebas unitarias y **validación del contenido editable** |
 | `npm run lint` | ESLint (incluye reglas de accesibilidad de plantillas) |
@@ -46,7 +46,7 @@ Dependencias: `features → shared, core`; `shared` no conoce el contenido; `cor
 
 `../.github/workflows/sitio.yml` valida y construye en cada push, y publica en GitHub Pages cuando el cambio llega a `main`.
 
-- **Vista previa** (por defecto): `https://<usuario>.github.io/dejando-huella/`, con `noindex` en todas las páginas. La subcarpeta se define en `baseHref` de la configuración `vista-previa` (`angular.json`); si el repositorio cambia de nombre, hay que actualizarla.
+- **Vista previa** (por defecto): `https://<usuario>.github.io/dejando-huella-page/`, con `noindex` en todas las páginas. La subcarpeta se define en `baseHref` de la configuración `vista-previa` (`angular.json`); si el repositorio cambia de nombre, hay que actualizarla.
 - **Producción**: crear la variable de repositorio `MODO_PUBLICACION=produccion` y configurar el dominio `dejandohuellacr.com` en Settings → Pages (DNS en GoDaddy: registros A/AAAA de GitHub Pages y CNAME de `www`).
 
 Las fuentes y las texturas del fondo se declaran en `src/index.html` con rutas relativas al `<base href>`, para que el mismo código funcione en los dos destinos.
